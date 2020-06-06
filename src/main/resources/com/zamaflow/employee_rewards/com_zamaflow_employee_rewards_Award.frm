@@ -1,0 +1,1 @@
+{"id":"6b89eb4c-16bc-4cb7-b52d-4031f2d03072","name":"com_zamaflow_employee_rewards_Award","model":{"source":"INTERNAL","className":"com.zamaflow.employee_rewards.Award","name":"Award","properties":[],"formModelType":"org.kie.workbench.common.forms.data.modeller.model.DataObjectFormModel"},"fields":[],"layoutTemplate":{"version":3,"style":"FLUID","layoutProperties":{},"rows":[]}}
