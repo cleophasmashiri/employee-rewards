@@ -7,29 +7,51 @@ package com.zamaflow.employee_rewards;
 @javax.persistence.Entity
 public class Award implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    @javax.persistence.GeneratedValue(generator = "AWARD_ID_GENERATOR", strategy = javax.persistence.GenerationType.AUTO)
-    @javax.persistence.Id
-    @javax.persistence.SequenceGenerator(sequenceName = "AWARD_ID_SEQ", name = "AWARD_ID_GENERATOR")
-    private java.lang.Long id;
+	@javax.persistence.GeneratedValue(generator = "AWARD_ID_GENERATOR", strategy = javax.persistence.GenerationType.AUTO)
+	@javax.persistence.Id
+	@javax.persistence.SequenceGenerator(sequenceName = "AWARD_ID_SEQ", name = "AWARD_ID_GENERATOR")
+	private java.lang.Long id;
 
-    public Award() {
-    }
-    
-    public Award(java.lang.Long id) {
-        this.id = id;
-    }
+	@org.kie.api.definition.type.Label(value = "Award Amount")
+	private java.lang.Integer award;
 
-    public java.lang.Long getId() {
-        return this.id;
-    }
-    
-    public void setId(java.lang.Long id) {
-        this.id = id;
-    }
+	@org.kie.api.definition.type.Label(value = "Explanation")
+	private java.lang.String explanation;
 
+	public Award() {
+	}
 
+	public java.lang.Long getId() {
+		return this.id;
+	}
 
+	public void setId(java.lang.Long id) {
+		this.id = id;
+	}
+
+	public java.lang.Integer getAward() {
+		return this.award;
+	}
+
+	public void setAward(java.lang.Integer award) {
+		this.award = award;
+	}
+
+	public java.lang.String getExplanation() {
+		return this.explanation;
+	}
+
+	public void setExplanation(java.lang.String explanation) {
+		this.explanation = explanation;
+	}
+
+	public Award(java.lang.Long id, java.lang.Integer award,
+			java.lang.String explanation) {
+		this.id = id;
+		this.award = award;
+		this.explanation = explanation;
+	}
 
 }
